@@ -25,23 +25,23 @@ public class BasketController : MonoBehaviour
         {
 
             this.aud.PlayOneShot(this.appleSE);
+
+            Debug.Log("Tag = Apple");
+
         }
         else
         {
             this.aud.PlayOneShot(this.bombSE);
+
+            Debug.Log("Tag = Bomb");
+
         }
 
         Destroy(other.gameObject);
-    }
+        }
 
-
-
-    //    Debug.Log("Tag = Apple");
-    // }
-    // else
-    //  {
-    //    Debug.Log("Tag = Bomb");
-    //  }
+     }
+     
 
 
     //	Debug.Log("キャッチ! ");
@@ -54,7 +54,11 @@ public class BasketController : MonoBehaviour
 
     //	}
 
+
+    }
+
     // Update is called once per frame
+
     void Update()
     {
 
@@ -74,7 +78,7 @@ public class BasketController : MonoBehaviour
         }
     }
 
-}
+
 
 
 
