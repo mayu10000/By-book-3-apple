@@ -38,10 +38,10 @@ public class BasketController : MonoBehaviour
         }
 
         Destroy(other.gameObject);
-        }
+    }
 
-     }
-     
+
+
 
 
     //	Debug.Log("キャッチ! ");
@@ -55,7 +55,7 @@ public class BasketController : MonoBehaviour
     //	}
 
 
-    }
+
 
     // Update is called once per frame
 
@@ -80,6 +80,7 @@ public class BasketController : MonoBehaviour
 
 
 
+}
 
 
 		

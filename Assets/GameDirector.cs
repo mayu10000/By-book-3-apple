@@ -5,30 +5,61 @@ using UnityEngine.UI; // UIを使うときは忘れないように注意！
 
 
 
-public class GameDirector : MonoBehaviour {
+public class GameDirector : MonoBehaviour
+{
 
     // Use this for initialization
 
 
- GameObject timerText ;
+    GameObject timerText;
 
-float time = 60.0f ;
+    GameObject pointText;
+
+    float time = 60.0f;
+
+    int point = 0;
 
 
-	void Start() {
+    public void GetApple()
+    {
+        this.point += 100;
+    }
+
+    public void GetBomb()
+    {
+        this.point /= 2;
+    }
+
+
+
+
+
+    void Start()
+    {
 
         this.timerText = GameObject.Find("Time");
 
-       }
-	
-	// Update is called once per frame
-	void Update () {
+        this.pointText = GameObject.Find("Point");
+
+    }
+
+
+
+    // Update is called once per frame
+    void Update()
+    {
 
 
         this.time -= Time.deltaTime;
         this.timerText.GetComponent<Text>().text =
             this.time.ToString("F1");
 
-        
+        this.pointText.GetComponent<Text>().text =
+            this.point.ToString() + " point";
+
+
+
     }
 }
+
+
