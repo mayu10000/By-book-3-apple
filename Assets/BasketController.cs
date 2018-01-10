@@ -10,8 +10,13 @@ public class BasketController : MonoBehaviour
     public AudioClip bombSE;
     AudioSource aud;
 
+    GameObject director;
+
+
     void start()
     {
+        this.director = GameObject.Find("GameDirector");
+        
         this.aud = GetComponent<AudioSource>();
 
     }
@@ -24,6 +29,8 @@ public class BasketController : MonoBehaviour
         if (other.gameObject.tag == "Apple")
         {
 
+            this.director.GetComponent<GameDirector>().GetApple();
+
             this.aud.PlayOneShot(this.appleSE);
 
             Debug.Log("Tag = Apple");
@@ -31,6 +38,9 @@ public class BasketController : MonoBehaviour
         }
         else
         {
+
+            this.director.GetComponent<GameDirector>().GetBomb();
+
             this.aud.PlayOneShot(this.bombSE);
 
             Debug.Log("Tag = Bomb");
