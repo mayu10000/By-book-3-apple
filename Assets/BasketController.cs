@@ -26,6 +26,12 @@ public class BasketController : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
+          if (this.director == null)
+
+          { Debug.Log("null - desu"); }
+
+
+
         if (other.gameObject.tag == "Apple")
         {
 
@@ -39,6 +45,18 @@ public class BasketController : MonoBehaviour
         else
         {
 
+
+
+            //  if (this.director == null)
+
+
+         //   if (this.director == null)
+
+         //   { Debug.Log("null - desu"); }
+
+
+
+            
             this.director.GetComponent<GameDirector>().GetBomb();
 
             this.aud.PlayOneShot(this.bombSE);
