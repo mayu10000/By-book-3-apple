@@ -1,11 +1,13 @@
 fileFormatVersion: 2
 guid: f40a7eed3eba394418fce6f2c9d73cd9
-timeCreated: 1514119189
+timeCreated: 1516360112
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - appleSE: {fileID: 8300000, guid: bf3eb3bb983fd2045bcc881940cefc64, type: 3}
+  - bombSE: {fileID: 8300000, guid: 1875ccad53b235046b2607ad6bc062a5, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

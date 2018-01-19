@@ -13,7 +13,7 @@ public class BasketController : MonoBehaviour
     GameObject director;
 
 
-    void start()
+    void Start()
     {
         this.director = GameObject.Find("GameDirector");
         
