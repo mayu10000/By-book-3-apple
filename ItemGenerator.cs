@@ -25,7 +25,6 @@ public class ItemGenerator : MonoBehaviour {
 
     
 
-
     // Use this for initialization
     //  void Start () {
 
@@ -38,7 +37,7 @@ public class ItemGenerator : MonoBehaviour {
         this.delta += Time.deltaTime;
         if (this.delta > this.span)
         {
-            this.delta = 0;
+        this.delta = 0;
 
 
             //   GameObject item = Instantiate(applePrefab) as GameObject;
@@ -63,10 +62,12 @@ public class ItemGenerator : MonoBehaviour {
 
             item.transform.position = new Vector3(x, 4, z);
 
-
             item.GetComponent<ItemController>().dropSpeed = this.speed;
 
-        }
- 
-            }
-        }
+
+        
+
+                }
+             }
+          }
+        
